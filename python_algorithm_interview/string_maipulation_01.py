@@ -6,7 +6,7 @@ import re
 import sys
 import math
 import bisect
-import typing import *
+from typing import *
 
 
 def isPalindrome(s: str) -> bool:
