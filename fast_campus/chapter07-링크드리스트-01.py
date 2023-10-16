@@ -28,3 +28,24 @@ while node.next:
     print(node.data)
     node = node.next
 print(node.data)
+
+# 예제: 링크드 리스트 데이터 사이에 데이터를 추가
+node3 = Node(1.5)
+node = head
+search = True
+while search:
+    if node.data == 1:
+        search = False
+    else:
+        node = node.next
+
+node_next = node.next
+node.next = node3
+node3.next = node_next
+
+# 다시 출력해보기 
+node = head
+while node.next:
+    print(node.data)
+    node = node.next
+print(node.data)
