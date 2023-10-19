@@ -44,6 +44,14 @@ class NodeMgmt:
                 else:
                     node = node.next
 
+    def search_node(self, data):
+        node = self.head
+        while node:
+            if node.data == data:
+                return node
+            else:
+                node = node.next
+
 
 # 링크드리스트 만들어보기
 print('\n링크드리스트 만들어보기')
@@ -82,3 +90,10 @@ linkedlist1.desc()
 # 마지막 노드를 삭제해 봄 (경우의 수 3)
 linkedlist1.delete(9)
 linkedlist1.desc()
+
+# 특정 숫자 찾아보기
+node_mgmt = NodeMgmt(0)
+for data in range(1, 10):
+    node_mgmt.add(data)
+node = node_mgmt.search_node(4)
+print(node.data)
