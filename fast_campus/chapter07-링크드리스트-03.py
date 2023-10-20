@@ -83,9 +83,9 @@ class NodeMgmt:
                     return False
             new = Node(data)
             after_new = node.next
-            new_next = after_new
             new.prev = node
             node.next = new
+            new.next = after_new
             if new.next == None:
                 self.tail = new
             return True
@@ -110,5 +110,5 @@ node_mgmt = NodeMgmt(0)
 for data in range(1, 6):
     node_mgmt.insert(data)
 node_mgmt.desc()
-node_mgmt.insert_after(1.5, 1)
+node_mgmt.insert_after(1.3, 1)
 node_mgmt.desc()
