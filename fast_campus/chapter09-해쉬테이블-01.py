@@ -67,10 +67,3 @@ print()
 print('[예제 출력]')
 print(read_data('Dave'))
 print(hash_table)
-
-
-# Chaining 기법 - linked list를 써야 하지만 여기서는 Python의 list를 활용
-hash_table = list([0 for i in range(8)])
-
-
-# def get_key()
