@@ -76,7 +76,7 @@ class NodeMgmt:
                 self.parent.left = self.current_node.left
             else:
                 self.parent.right = self.current_node.left
-        elif self.current_node.left = None and self.current_node.right != None:
+        elif self.current_node.left == None and self.current_node.right != None:
             if value < self.parent.value:
                 self.parent.left = self.current_node.right
             else:
@@ -109,10 +109,16 @@ class NodeMgmt:
                 while self.change_node.left != None:
                     self.change_node_parent = self.change_node
                     self.change_node = self.change_node.left
+                # case 3-2-2: 삭제할 Node의 오른쪽 자식 중,
+                #             가장 작은 값을 가진 Node의 오른쪽에 Child Node가 있을 때
                 if self.change_node.right != None:
                     self.change_node_parent.left = self.change_node.right
+                # case 3-2-1: 삭제할 Node의 오른쪽 자식 중,
+                #             가장 작은 값을 가진 Node의 Child Node가 없을 때
                 else:
                     self.change_node_parent.left = None
                 self.parent.right = self.change_node
                 self.change_node.left = self.current_node.left
                 self.change_node.right = self.current_node.right
+
+        return True
