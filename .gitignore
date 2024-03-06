@@ -162,4 +162,4 @@ cython_debug/
 Scripts/
 test.py
 pyvenv.cfg
-/fastcampus/binary_tree.py
+binary_tree.py
